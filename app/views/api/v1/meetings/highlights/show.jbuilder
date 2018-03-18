@@ -1,0 +1,1 @@
+json.partial! 'api/v1/meetings/highlights/highlight', highlight: @highlight

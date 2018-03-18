@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  organizer_emai: MyString
+  start_time: 2018-03-18 18:06:14
+  end_time: 2018-03-18 18:06:14
+  audio_file_location: MyString
+
+two:
+  title: MyString
+  organizer_emai: MyString
+  start_time: 2018-03-18 18:06:14
+  end_time: 2018-03-18 18:06:14
+  audio_file_location: MyString

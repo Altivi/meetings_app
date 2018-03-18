@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meeting: one
+  start_time: 2018-03-18 18:07:20
+  end_time: 2018-03-18 18:07:20
+  highlight_text: MyText
+
+two:
+  meeting: two
+  start_time: 2018-03-18 18:07:20
+  end_time: 2018-03-18 18:07:20
+  highlight_text: MyText
