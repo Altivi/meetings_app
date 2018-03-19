@@ -28,8 +28,8 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/meetings/62/highlights",
-      "request_body": "highlight[highlight_text]=Text&highlight[start_time]=2018-03-19T02%3A21%3A26%2B02%3A00&highlight[end_time]=2018-03-19T02%3A22%3A26%2B02%3A00",
+      "request_path": "/api/v1/meetings/76/highlights",
+      "request_body": "highlight[highlight_text]=Text&highlight[start_time]=2018-03-19T02%3A35%3A22%2B02%3A00&highlight[end_time]=2018-03-19T02%3A36%3A22%2B02%3A00",
       "request_headers": {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -38,7 +38,7 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 1,\n  \"highlight_text\": \"Text\",\n  \"start_time\": \"2018-03-19T00:21:26.000Z\",\n  \"end_time\": \"2018-03-19T00:22:26.000Z\"\n}",
+      "response_body": "{\n  \"id\": 2,\n  \"highlight_text\": \"Text\",\n  \"start_time\": \"2018-03-19T00:35:22.000Z\",\n  \"end_time\": \"2018-03-19T00:36:22.000Z\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },

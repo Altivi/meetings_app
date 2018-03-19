@@ -5,7 +5,7 @@ require 'rspec_api_documentation/dsl'
 RspecApiDocumentation.configure do |config|
   config.format = :json
   config.curl_host = nil
-  config.api_name = 'Fitnessapp API'
+  config.api_name = 'MeetingsApp API'
   config.request_headers_to_include = ['Content-Type', 'Access-Token']
   config.response_headers_to_include = ['Content-Type', 'Access-Token']
   config.curl_headers_to_filter = ["Cookie", 'Host'] # Remove this if you want to show Auth headers in request

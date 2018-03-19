@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'responders'
 gem 'rspec_api_documentation'
+gem 'apitome'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
