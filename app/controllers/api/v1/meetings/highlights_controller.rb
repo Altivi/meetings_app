@@ -2,7 +2,9 @@ class Api::V1::Meetings::HighlightsController < Api::V1::Meetings::BaseControlle
   def create
     @highlight = @meeting.highlights.create(highlight_params)
 
-    unless @highlight.save
+    if @highlight.save
+      render :show
+    else  
       render_error(422, 'NotSaved', @highlight.errors.full_messages.join(', '))
     end
   end

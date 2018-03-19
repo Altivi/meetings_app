@@ -1,0 +1,71 @@
+{
+  "resource": "Meetings",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/api/v1/meetings",
+  "description": "Create Comment",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "meeting",
+      "name": "title",
+      "description": "Meeting title"
+    },
+    {
+      "scope": "meeting",
+      "name": "organizer_email",
+      "description": "Meeting organizer_email"
+    },
+    {
+      "scope": "meeting",
+      "name": "start_time",
+      "description": "Meeting start_time"
+    },
+    {
+      "scope": "meeting",
+      "name": "end_time",
+      "description": "Meeting end_time"
+    },
+    {
+      "scope": "meeting",
+      "name": "audio_file_location",
+      "description": "Meeting audio_file_location"
+    },
+    {
+      "name": "meeting[highlights_attributes][highlight_text]",
+      "description": "Highlight text"
+    },
+    {
+      "name": "meeting[highlights_attributes][start_time]",
+      "description": "Highlight start time"
+    },
+    {
+      "name": "meeting[highlights_attributes][end_time]",
+      "description": "Highlight end time"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/meetings",
+      "request_body": "meeting[title]=Title&meeting[organizer_email]=Post&meeting[start_time]=Test+Comment&meeting[end_time]=Test+Comment&meeting[audio_file_location]=Test+Comment",
+      "request_headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 71,\n  \"title\": \"Title\",\n  \"organizer_email\": \"Post\",\n  \"start_time\": null,\n  \"end_time\": null,\n  \"audio_file_location\": \"Test Comment\",\n  \"highlights\": [\n\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

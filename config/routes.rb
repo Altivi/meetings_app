@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     namespace :v1 do
       root 'meetings#index', as: :root
       resources :meetings, only: [:index, :show, :create] do
-        resources :highlights, only: [:create]
+        scope module: :meetings do
+          resources :highlights, only: [:create]
+        end
       end
     end
   end

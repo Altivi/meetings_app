@@ -1,0 +1,49 @@
+{
+  "resource": "Highlights",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/api/v1/meetings/:meeting_id/highlights",
+  "description": "Create highlight",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "highlight",
+      "name": "highlight_text",
+      "description": "Highlight text"
+    },
+    {
+      "scope": "highlight",
+      "name": "start_time",
+      "description": "Highlight start time"
+    },
+    {
+      "scope": "highlight",
+      "name": "end_time",
+      "description": "Highlight end time"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/meetings/62/highlights",
+      "request_body": "highlight[highlight_text]=Text&highlight[start_time]=2018-03-19T02%3A21%3A26%2B02%3A00&highlight[end_time]=2018-03-19T02%3A22%3A26%2B02%3A00",
+      "request_headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1,\n  \"highlight_text\": \"Text\",\n  \"start_time\": \"2018-03-19T00:21:26.000Z\",\n  \"end_time\": \"2018-03-19T00:22:26.000Z\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

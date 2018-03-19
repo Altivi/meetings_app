@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { fetchMeetings } from '../actions/meetings'
+import { fetchMeetings, createMeeting } from '../actions/meetings'
+import MeetingForm from '../components/MeetingForm'
 
 class MeetingsList extends Component {
   componentWillMount() {
@@ -25,11 +26,13 @@ class MeetingsList extends Component {
   }
 
   render() {
+    const { createMeeting } = this.props
     return (
       <div className="row">
         <ul className="list-group col-md-12">
           {this.renderList()}
         </ul>
+        <MeetingForm createMeeting={createMeeting}/>
       </div>
     )
   }
@@ -44,7 +47,8 @@ function mapStateToProps(state) {
 
 function matchDispatchToProps(dispatch){
   return bindActionCreators({
-    fetchMeetings
+    fetchMeetings,
+    createMeeting
   }, dispatch)
 }
 

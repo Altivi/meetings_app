@@ -1,0 +1,44 @@
+{
+  "resources": [
+    {
+      "name": "Highlights",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create highlight",
+          "link": "highlights/create_highlight.json",
+          "groups": "all",
+          "route": "/api/v1/meetings/:meeting_id/highlights",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Meetings",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get all meetings",
+          "link": "meetings/get_all_meetings.json",
+          "groups": "all",
+          "route": "/api/v1/meetings",
+          "method": "get"
+        },
+        {
+          "description": "Create Comment",
+          "link": "meetings/create_comment.json",
+          "groups": "all",
+          "route": "/api/v1/meetings",
+          "method": "post"
+        },
+        {
+          "description": "Get specific meeting",
+          "link": "meetings/get_specific_meeting.json",
+          "groups": "all",
+          "route": "/api/v1/meetings/:id",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

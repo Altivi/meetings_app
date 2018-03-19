@@ -5,7 +5,9 @@ import HighlightsReducer from './reducer-highlights'
 const initialState = {
   meetingsIsFetching: false,
   createMeetingIsFetching: false,
-  activeMeeting: {},
+  activeMeeting: {
+    highlights: []
+  },
   list: [
     {
       highlights: []
@@ -45,6 +47,15 @@ export default (state = initialState, action) => {
           action.meeting,
           ...state.list
         ]
+      }
+    case ACTION_TYPES.HIGHLIGHT_CREATED:
+      return {
+        ...state,
+        activeMeeting: {
+          ...state.activeMeeting,
+          highlights: HighlightsReducer(state.activeMeeting.highlights, action)
+        },
+        errors: ''
       }
     case ACTION_TYPES.FETCH_MEETING_ERROR:
     case ACTION_TYPES.FETCH_MEETINGS_ERROR:

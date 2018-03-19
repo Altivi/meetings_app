@@ -2,6 +2,7 @@ import * as ACTION_TYPES from '../constants/actionTypes'
 
 import API_URL from '../constants/api'
 import axios from 'axios'
+import { pickBy } from 'lodash'
 
 /**************** FETCH MEETINGS **************/
 
@@ -113,10 +114,22 @@ function createMeetingError(errors) {
 export function createMeeting(data) {
   return async (dispatch, getState) => {
     dispatch(requestCreateMeeting())
+    let highlights = (pickBy(data, function(value, key) {
+      return /^(highlight)\d+/.test(key) && value !== undefined
+    }))
+    let highlightsArr = []
+    for (let highlight in highlights) {
+      highlightsArr.push(highlights[highlight])
+    }
     axios({
       method: 'post',
       url: API_URL + '/meetings.json',
-      data: data
+      data: {
+        meeting: {
+          ...data,
+          highlights_attributes: highlightsArr
+        }
+      }
     })
     .then(response => {
       dispatch(meetingCreated(response.data))
