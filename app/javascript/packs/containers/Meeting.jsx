@@ -7,7 +7,7 @@ import { createHighlight } from '../actions/highlights'
 import HighlightForm from '../components/HighlightForm'
 
 class Meeting extends Component {
-  componentWillMount() {
+  componentDidMount() {
     const { fetchMeeting, params } = this.props
     fetchMeeting(params.id)
   }

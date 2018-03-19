@@ -6,7 +6,7 @@ import { fetchMeetings, createMeeting } from '../actions/meetings'
 import MeetingForm from '../components/MeetingForm'
 
 class MeetingsList extends Component {
-  componentWillMount() {
+  componentDidMount() {
     const { fetchMeetings } = this.props
     fetchMeetings()
   }
